@@ -1,0 +1,54 @@
+@media all and (max-width: 1280px) {
+    .container {
+        width: 100%;
+    }
+
+
+    #moviesList {
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 1.5rem;
+    }
+
+    /*li:nth-last-child(1){*/
+    /*    margin-right: auto;*/
+    /*}*/
+}
+
+@media all and (max-width: 770px) {
+
+    #moviesList {
+        padding: 0;
+    }
+
+    li {
+        width: 28rem;
+        min-height: 43rem;
+        margin: 1.2rem;
+    }
+
+    .factor:nth-last-child(1) {
+        padding: 0.7rem;
+    }
+
+    li:nth-last-child(1) {
+        margin-right: 37rem;
+    }
+}
+
+
+@media all and (max-width: 425px) {
+    #moviesList {
+        justify-content: center;
+        padding: 1.5rem;
+    }
+
+    li {
+        padding: 0;
+        margin: 2rem 0;
+    }
+
+    li:nth-last-child(1) {
+        margin-right: unset;
+    }
+}

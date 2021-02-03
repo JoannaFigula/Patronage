@@ -1,0 +1,50 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* defined focus styles */
+:focus {
+    outline: 0;
+}
+
+:root {
+    --green: rgb(111, 154, 65);
+    --light-gray: rgb(212, 212, 211);
+    --light-gray1: rgba(255, 255, 255, 0.9);
+    --gray: rgb(72, 80, 78);
+    --gray1: rgb(81, 84, 78);
+    --gray2: rgb(94, 97, 90);
+    --dark-gray:rgb(32, 33, 31);
+    --very-dark-gray: rgb(12, 13, 12);
+    --light: rgb(212, 212, 211);
+    --yellow: rgb(227, 168, 70);
+    --pink: rgb(250, 72, 176);
+    --pink1: rgb(250, 80, 121);
+    --blue: rgb(54, 93, 227);
+}
+
+body {
+    /*display: flex;*/
+    /*align-items: center;*/
+    line-height: 1;
+    color: black;
+    /*flex-direction: column;*/
+}
+ol, ul {
+    list-style: none;
+}

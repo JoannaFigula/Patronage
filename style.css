@@ -1,0 +1,213 @@
+@import url(reset.css);
+@import "media.css";
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+    background-color: var(--very-dark-gray);
+}
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+}
+
+#moviesCountersContainer {
+    /*height: 10rem;*/
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    /*background-color: rgba(94, 97, 90, 0.9);*/
+}
+
+/*3. Liczniki filmów umieścić w górnym prawym rogu strony.*/
+.movieCountersParagraphs {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--light-gray);
+}
+
+.movieCountersParagraphs p {
+    padding: 2rem;
+    color: var(--very-dark-gray);
+}
+
+/*1. Pogrubić liczby wszystkich oraz obejrzanych filmów.*/
+.movieCountersParagraphs p span {
+    font-weight: bold;
+    padding: 0 2rem;
+}
+
+/*2. Stworzyć odstęp 100px pomiędzy górą strony a listą filmów.*/
+.movieLogo {
+    padding: 3rem;
+    margin-left: 0.5rem;
+}
+
+.movieLogo img {
+    width: 25%;
+    height: 25%;
+}
+
+/*4. Wyśrodkować horyzontalnie listę „moviesList”.*/
+#moviesListContainer {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#moviesList {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;}
+
+/*li:nth-last-child(-n+3) {*/
+/*    display: flex;*/
+/*    align-self: flex-start;*/
+/*    min-height: 44.4rem;*/
+/*}*/
+
+/*li:nth-last-child(1){*/
+/*    margin-right: auto;*/
+/*}*/
+
+li {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+    margin: 2rem 2rem;
+    padding: 1rem;
+    width: 35rem;
+    min-height: 44rem;
+    background-color: var(--dark-gray);
+    border-radius: 4px;
+    transition: all 1s ease;
+}
+
+/*5. Spowodować podświetlenie każdego elementu listy*/
+/*„moviesList” po najechaniu na niego kursorem myszki.*/
+li:hover {
+    border:5px solid var(--green);
+    flex-grow:1;
+}
+
+#moviesList li > * {
+    margin-bottom: 1.5rem;
+}
+
+#moviesList.li > li, h2, .summary, .factorGroup {
+    padding: 0.5rem 1.5rem;
+}
+
+#moviesList img {
+    width: 100%;
+    min-height: 20rem;
+    padding: 5px;
+}
+
+h2, .summary, .factorGroup {
+    /*padding: 1rem 2rem;*/
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.summary {
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.factorGroup {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    margin-top: auto;
+    /*margin-bottom: 1rem;*/
+}
+
+.factor {
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    margin: 0.3rem;
+}
+
+.factorParagraph {
+    padding: 0.7rem;
+    background-color: var(--blue);
+}
+
+.factor:nth-last-child(1) {
+    display: flex;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.btnSeen {
+    padding: 0.7rem 1.2rem;
+    background-color: var(--pink);
+    align-items: end;
+    cursor: pointer;
+}
+
+.btnViewed {
+    padding: 0.7rem 1.2rem;
+    background-color: var(--green);
+    align-items: end;
+    cursor: pointer;
+}
+
+
+/*.btnViewed:hover {*/
+/*    background-color: var(--green);*/
+/*}*/
+
+/*.plus {*/
+/*    color:var(--yellow);*/
+/*}*/
+
+/*#toggle {*/
+/*    border:1px solid black;*/
+/*}*/
+
+#toggle:before {
+    font-family: "Font Awesome 5 Free", serif;
+    content: "\f067";
+    font-style: normal;
+}
+
+#toggle.is-active:before {
+    font-family: "Font Awesome 5 Free", serif;
+    content: "\f00c";
+    font-style: normal;
+}
+
+
+
+/*Stworzony styl powinien:*/
+/*1. Pogrubić liczby wszystkich oraz obejrzanych filmów.*/
+/*2. Stworzyć odstęp 100px pomiędzy górą strony a listą filmów.*/
+/*3. Liczniki filmów umieścić w górnym prawym rogu strony.*/
+/*4. Wyśrodkować horyzontalnie listę „moviesList”.*/
+/*5. Spowodować podświetlenie każdego elementu listy*/
+/*„moviesList” po najechaniu na niego kursorem myszki.*/
+

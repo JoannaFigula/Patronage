@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let $moviesCounterSeen;
     let $moviesCounterAll;
     let $moviesList;
+    let $movieItem;
     let $btnSeen;
     let $toggle;
 
@@ -18,14 +19,18 @@ document.addEventListener("DOMContentLoaded", function () {
     $newMovieItem = moviesData.map(element => {
         $idCounter++;
         return `<li class="movieItem" id="moviesItem-${$idCounter}">
-                <img alt="" class="bg" src="${element.url}">
-                <h2> ${element.title} </h2>
-                    <p class="summary">${element.summary}</p>
-                    <div class="factorGroup">
-                        <p class="factor factorParagraph">${element.year}</p>
-                        <p class="factor factorParagraph">${element.genre}</p>
-                        <button class="factor btnSeen"><i class="fas fa-plus toggle"></i>&nbsp Add to Viewed</button>
-                    </div>
+                    <span></span>
+                    <span></span>   
+                    <span></span>
+                    <span></span>             
+                    <img alt="" class="bg" src="${element.url}">
+                    <h2> ${element.title} </h2>
+                        <p class="summary">${element.summary}</p>
+                        <div class="factorGroup">
+                            <p class="factor factorParagraph">${element.year}</p>
+                            <p class="factor factorParagraph">${element.genre}</p>
+                            <button class="factor btnSeen"><i class="fas fa-plus toggle"></i>&nbsp Add to Viewed</button>
+                        </div>                
                 </li>`;
     }).join(' ');
 
@@ -36,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $btnSeen = document.querySelectorAll('.btnSeen');
     $toggle = document.querySelector('.toggle');
     $moviesCounterSeen = document.getElementById('moviesCounterSeen');
+    $movieItem = document.querySelector('.movieItem');
 
     $btnSeen.forEach(item => {
         item.addEventListener('click', (e) => {
@@ -46,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 $counterViewed++;
                 $toggle.classList.toggle("is-active");
                 $moviesCounterSeen.innerText = $counterViewed;
+                $movieItem.style = "border: 0.5rem solid var(--green)";
                 item.innerHTML = `<i class="fas fa-check"></i>&nbsp Viewed`;
             } else if (target.classList.contains('btnViewed')) {
                 target.classList.remove('btnViewed');

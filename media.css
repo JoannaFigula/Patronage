@@ -3,7 +3,6 @@
         width: 100%;
     }
 
-
     #moviesList {
         width: 100%;
         justify-content: space-evenly;
@@ -36,7 +35,6 @@
     }
 }
 
-
 @media all and (max-width: 425px) {
     #moviesList {
         justify-content: center;
@@ -50,5 +48,17 @@
 
     li:nth-last-child(1) {
         margin-right: unset;
+    }
+
+    .movieCountersParagraphs p {
+        text-align: right;
+        font-size: 1.5rem;
+        padding: 1.7rem 1rem;
+        color: var(--very-dark-gray);
+    }
+
+    .movieLogo img {
+        width: 40%;
+        height: 40%;
     }
 }

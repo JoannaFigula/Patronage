@@ -15,9 +15,7 @@ body {
     align-items: center;
 }
 
-.container {
-    width: 100%;
-}
+
 
 #moviesCountersContainer {
     /*height: 10rem;*/
@@ -25,7 +23,6 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    /*background-color: rgba(94, 97, 90, 0.9);*/
 }
 
 /*3. Liczniki filmów umieścić w górnym prawym rogu strony.*/
@@ -35,17 +32,23 @@ body {
     top: 0;
     right: 0;
     background-color: var(--blue);
-
+    border-radius:4px;
+    z-index: 999;
 }
 
 .movieCountersParagraphs p {
-    padding: 2rem;
+    font-size: 1.7rem;
+    padding: 3rem 1rem;
     color: var(--very-dark-gray);
+}
+
+p:first-child {
+    margin-left: 1.5rem;
 }
 
 .movieCountersParagraphs span {
     color: var(--pink);
-
+    font-size: 2rem;
 }
 
 /*1. Pogrubić liczby wszystkich oraz obejrzanych filmów.*/
@@ -56,7 +59,7 @@ body {
 
 /*2. Stworzyć odstęp 100px pomiędzy górą strony a listą filmów.*/
 .movieLogo {
-    padding: 3rem;
+    padding: 2.2rem;
     margin-left: 0.5rem;
 }
 
@@ -75,7 +78,7 @@ body {
 }
 
 #moviesList {
-    width: 70%;
+    width: 75%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -103,10 +106,14 @@ li {
     min-height: 43rem;
     background-color: var(--dark-gray);
     border-radius: 4px;
+;
     /*transition: all 1s ease;*/
     position: relative;
     overflow: hidden;
     transition: 0.2s;
+}
+.greenBorder {
+    border: 3px solid var(--green);
 }
 
 /*5. Spowodować podświetlenie każdego elementu listy*/
@@ -119,6 +126,7 @@ li:hover {
     box-shadow: 0 0 10px var(--green), 0 0 40px var(--green), 0 0 80px var(--green);
     transition-delay:1s;
 }
+
 
 li span {
     position: absolute;
@@ -145,6 +153,7 @@ li span:nth-child(3){
     height: 0.4rem;
     background: linear-gradient(270deg, transparent, var(--green));
 }
+
 li:hover span:nth-child(3){
     right: 100%;
     transition: 0.8s;
@@ -158,11 +167,13 @@ li span:nth-child(2){
     height: 100%;
     background: linear-gradient(180deg, transparent, var(--green));
 }
+
 li:hover span:nth-child(2){
     top: 100%;
     transition: 0.8s;
     transition-delay: 0.25s;
 }
+
 li span:nth-child(4){
     bottom:-105%;
     left: 0;
@@ -170,12 +181,12 @@ li span:nth-child(4){
     height: 100%;
     background: linear-gradient(360deg, transparent, var(--green));
 }
+
 li:hover span:nth-child(4){
     bottom: 105%;
     transition: 0.8s;
     transition-delay: 0.75s;
 }
-
 
 #moviesList li > * {
     margin-bottom: 1.5rem;
@@ -244,6 +255,10 @@ h2 {
     background-color: var(--green);
     align-items: end;
     cursor: pointer;
+}
+
+.fas {
+    margin-right: 0.8rem;
 }
 
 

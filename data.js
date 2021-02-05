@@ -23,7 +23,7 @@ moviesData = [
         "year": 2008,
         "genre": "action",
         "summary": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham, the Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
-        "seen": "T",
+        "seen": "F",
         "url": "assets/darkknight.jpg"
     },
     {

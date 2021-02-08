@@ -6,12 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
             this.parent = parent;
             this.render()
         }
-
+//    2.   Stworzy nowy element listy „moviesList” dla każdego elementu
+//         tablicy „moviesData”. Elementy listy „moviesList” powinny zawierać
+//         wszystkie podstawowe informacje o filmie oraz symbol graficzny
+//         reprezentujący informację czy film był lub nie był obejrzany.
         render() {
             const isSeen = this.movie.seen;
             let btnText;
             if (!isSeen) {
-                btnText= `<i class="fas fa-plus"></i> Add to Viewed`;
+                btnText= `<i class="fas fa-plus"></i> Add to viewed`;
             } else {
                 btnText = `<i class="fas fa-check"></i> Viewed`
             }
@@ -56,6 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             this.movies = this.movies.map(changeSeen);
         }
+
+//    1.   Zliczy wszystkie oraz obejrzane filmy z tablicy „moviesData”, oraz
+//         wyświetli te informacje w elementach „moviesCounterSeen” i
+//         „moviesCounterAll”.
 
         updateCounterAll() {
             this.totalCount = this.movies.length;
@@ -122,13 +129,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 })
 // 6. W pliku script.js umieść kod zgodny ze standardem ES6 który:
-//    1.   Zliczy wszystkie oraz obejrzane filmy z tablicy „moviesData”, oraz
-//         wyświetli te informacje w elementach „moviesCounterSeen” i
-//         „moviesCounterAll”.
-//    2.   Stworzy nowy element listy „moviesList” dla każdego elementu
-//         tablicy „moviesData”. Elementy listy „moviesList” powinny zawierać
-//         wszystkie podstawowe informacje o filmie oraz symbol graficzny
-//         reprezentujący informację czy film był lub nie był obejrzany.
+
+
 //    3.    Obsłuży kliknięcie symbolu graficznego:
 //      a. Przełączy wartość atrybutu „seen” w „moviesData” dla
 //         danego filmu

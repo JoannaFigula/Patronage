@@ -15,10 +15,7 @@ body {
     align-items: center;
 }
 
-
-
 #moviesCountersContainer {
-    /*height: 10rem;*/
     font-size: 2rem;
     display: flex;
     align-items: center;
@@ -33,17 +30,14 @@ body {
     right: 0;
     background-color: var(--blue);
     border-radius:4px;
+    text-align: center;
     z-index: 999;
 }
 
 .movieCountersParagraphs p {
-    font-size: 1.7rem;
-    padding: 3rem 1rem;
+    padding: 2rem 3rem;
+    font-size: 1.5rem;
     color: var(--very-dark-gray);
-}
-
-p:first-child {
-    margin-left: 1.5rem;
 }
 
 .movieCountersParagraphs span {
@@ -54,7 +48,7 @@ p:first-child {
 /*1. Pogrubić liczby wszystkich oraz obejrzanych filmów.*/
 .movieCountersParagraphs p span {
     font-weight: bold;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 /*2. Stworzyć odstęp 100px pomiędzy górą strony a listą filmów.*/
@@ -83,19 +77,10 @@ p:first-child {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    color: white;}
+    color: white;
+}
 
-/*li:nth-last-child(-n+3) {*/
-/*    display: flex;*/
-/*    align-self: flex-start;*/
-/*    min-height: 44.4rem;*/
-/*}*/
-
-/*li:nth-last-child(1){*/
-/*    margin-right: auto;*/
-/*}*/
-
-li {
+.movieItem {
     display: flex;
     justify-content: flex-start;
     align-content: flex-start;
@@ -103,23 +88,20 @@ li {
     margin: 2rem 2rem;
     padding: 1rem;
     width: 35rem;
+    max-width: 45rem;
     min-height: 43rem;
     background-color: var(--dark-gray);
     border-radius: 4px;
-;
-    /*transition: all 1s ease;*/
     position: relative;
     overflow: hidden;
     transition: 0.2s;
 }
-.greenBorder {
-    border: 3px solid var(--green);
-}
+
+.greenBorder { border: 3px solid var(--green); }
 
 /*5. Spowodować podświetlenie każdego elementu listy*/
 /*„moviesList” po najechaniu na niego kursorem myszki.*/
-li:hover {
-    /*border:5px solid var(--green);*/
+.movieItem:hover {
     flex-grow:1;
     color: white;
     background: var(--very-dark-gray);
@@ -127,13 +109,12 @@ li:hover {
     transition-delay:1s;
 }
 
-
-li span {
+.movieItem span {
     position: absolute;
     display: block;
 }
 
-li span:nth-child(1){
+.movieItem span:nth-child(1){
     top:0;
     left: -100%;
     width: 100%;
@@ -141,12 +122,12 @@ li span:nth-child(1){
     background: linear-gradient(90deg, transparent, var(--green));
 }
 
-li:hover span:nth-child(1){
+.movieItem:hover span:nth-child(1){
     left: 100%;
     transition: 0.8s;
 }
 
-li span:nth-child(3){
+.movieItem span:nth-child(3){
     bottom:-15px;
     right: -100%;
     width: 100%;
@@ -154,13 +135,13 @@ li span:nth-child(3){
     background: linear-gradient(270deg, transparent, var(--green));
 }
 
-li:hover span:nth-child(3){
+.movieItem:hover span:nth-child(3){
     right: 100%;
     transition: 0.8s;
     transition-delay: 0.5s;
 }
 
-li span:nth-child(2){
+.movieItem span:nth-child(2){
     top:-100%;
     right: 0;
     width: 0.4rem;
@@ -168,13 +149,13 @@ li span:nth-child(2){
     background: linear-gradient(180deg, transparent, var(--green));
 }
 
-li:hover span:nth-child(2){
+.movieItem:hover span:nth-child(2){
     top: 100%;
     transition: 0.8s;
     transition-delay: 0.25s;
 }
 
-li span:nth-child(4){
+.movieItem span:nth-child(4){
     bottom:-105%;
     left: 0;
     width: 0.4rem;
@@ -182,15 +163,13 @@ li span:nth-child(4){
     background: linear-gradient(360deg, transparent, var(--green));
 }
 
-li:hover span:nth-child(4){
+.movieItem:hover span:nth-child(4){
     bottom: 105%;
     transition: 0.8s;
     transition-delay: 0.75s;
 }
 
-#moviesList li > * {
-    margin-bottom: 1.5rem;
-}
+#moviesList li > * { margin-bottom: 1.5rem; }
 
 #moviesList.li > li, h2, .summary, .factorGroup {
     padding: 0.5rem 1.5rem;
@@ -201,98 +180,45 @@ li:hover span:nth-child(4){
     min-height: 20rem;
     padding: 5px;
 }
-
-h2, .summary, .factorGroup {
-    /*padding: 1rem 2rem;*/
-}
-
-h2 {
+.movieItem h2 {
     font-size: 1.6rem;
     font-weight: bold;
 }
 
-.summary {
+.movieItem .summary {
     font-size: 1.3rem;
     line-height: 1.5;
 }
 
-.factorGroup {
+.movieItem .factorGroup {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
     font-size: 1.2rem;
     margin-top: auto;
-    /*margin-bottom: 1rem;*/
 }
 
-.factor {
-    border: none;
-    border-radius: 0.5rem;
-    color: white;
-    margin: 0.3rem;
-}
+.factorGroup .factorParagraph { background-color: var(--blue); }
 
-.factorParagraph {
-    padding: 0.7rem;
-    background-color: var(--blue);
-}
-
-.factor:nth-last-child(1) {
+.factorGroup .factor:nth-last-child(1) {
     display: flex;
     align-self: flex-end;
     margin-left: auto;
 }
 
-.btnSeen {
-    padding: 0.7rem 1.2rem;
-    background-color: var(--pink);
+.factorGroup .factor {
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    margin: 0.3rem;
+    padding: 0.7rem 1rem;
     align-items: end;
     cursor: pointer;
 }
 
-.btnViewed {
-    padding: 0.7rem 1.2rem;
-    background-color: var(--green);
-    align-items: end;
-    cursor: pointer;
-}
+.factorGroup .btnSeen { background-color: var(--pink); }
 
-.fas {
-    margin-right: 0.8rem;
-}
+.factorGroup .btnViewed { background-color: var(--green); }
 
-
-/*.btnViewed:hover {*/
-/*    background-color: var(--green);*/
-/*}*/
-
-/*.plus {*/
-/*    color:var(--yellow);*/
-/*}*/
-
-/*#toggle {*/
-/*    border:1px solid black;*/
-/*}*/
-
-#toggle:before {
-    font-family: "Font Awesome 5 Free", serif;
-    content: "\f067";
-    font-style: normal;
-}
-
-#toggle.is-active:before {
-    font-family: "Font Awesome 5 Free", serif;
-    content: "\f00c";
-    font-style: normal;
-}
-
-
-
-/*Stworzony styl powinien:*/
-/*1. Pogrubić liczby wszystkich oraz obejrzanych filmów.*/
-/*2. Stworzyć odstęp 100px pomiędzy górą strony a listą filmów.*/
-/*3. Liczniki filmów umieścić w górnym prawym rogu strony.*/
-/*4. Wyśrodkować horyzontalnie listę „moviesList”.*/
-/*5. Spowodować podświetlenie każdego elementu listy*/
-/*„moviesList” po najechaniu na niego kursorem myszki.*/
+.factorGroup .fas { margin-right: 0.5rem; }
 

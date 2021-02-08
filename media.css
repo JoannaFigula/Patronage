@@ -1,37 +1,37 @@
-@media all and (max-width: 1280px) {
+@media all and (max-width: 1441px) {
     .container {
         width: 100%;
     }
 
     #moviesList {
         width: 100%;
-        justify-content: space-evenly;
+        justify-content: center;
         padding: 1.5rem;
     }
 
-    /*li:nth-last-child(1){*/
-    /*    margin-right: auto;*/
-    /*}*/
+
+    .movieCountersParagraphs {
+        display: flex;
+        position: fixed;
+        top: 50px;
+        right: -60px;
+        transform: rotate(45deg);
+    }
+    .movieCountersParagraphs p:first-child{ padding: 1.5rem 1rem 1.5rem 5rem; }
+
+    .movieCountersParagraphs p:last-child{ padding: 1.5rem 5rem 1.5rem 0;}
 }
 
 @media all and (max-width: 770px) {
 
-    #moviesList {
-        padding: 0;
-    }
-
-    li {
-        width: 28rem;
+    .movieItem {
+        width: 32rem;
         min-height: 43rem;
         margin: 1.2rem;
     }
 
-    .factor:nth-last-child(1) {
-        padding: 0.7rem;
-    }
-
-    li:nth-last-child(1) {
-        margin-right: 37rem;
+    li:nth-last-child(1){
+        margin-right: unset;
     }
 }
 
@@ -41,13 +41,9 @@
         padding: 1.5rem;
     }
 
-    li {
+    .movieItem {
         padding: 0;
         margin: 2rem 0;
-    }
-
-    li:nth-last-child(1) {
-        margin-right: unset;
     }
 
     .movieCountersParagraphs p {
